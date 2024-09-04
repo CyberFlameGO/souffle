@@ -175,7 +175,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install lcov
 
     - name: download-coverage-artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
 
     - name: merge-coverage-report
       run: lcov $(for i in coverage-*-*/coverage.info; do echo -a $i; done) --output-file coverage.info
